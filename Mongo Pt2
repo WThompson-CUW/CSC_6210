@@ -1,0 +1,180 @@
+[{
+  "_id": {
+    "$oid": "68c625195154efcdeca2a48e"
+  },
+  "name": {
+    "first": "Jordan",
+    "last": "Love"
+  },
+  "active": true,
+  "age": {
+    "$numberDecimal": "26"
+  },
+  "position": "QB",
+  "team": "packers"
+},
+{
+  "_id": {
+    "$oid": "68c636965154efcdeca2a493"
+  },
+  "name": {
+    "first": "Josh",
+    "last": "Jacobs"
+  },
+  "active": true,
+  "age": {
+    "$numberDecimal": "27"
+  },
+  "position": "RB",
+  "team": "packers"
+},
+{
+  "_id": {
+    "$oid": "68c636e55154efcdeca2a494"
+  },
+  "name": {
+    "first": "Jayden",
+    "last": "Reed"
+  },
+  "active": false,
+  "age": {
+    "$numberDecimal": "25"
+  },
+  "position": "WR",
+  "team": "packers"
+},
+{
+  "_id": {
+    "$oid": "68c6372a5154efcdeca2a495"
+  },
+  "name": {
+    "first": "Matthew",
+    "last": "Golden"
+  },
+  "active": true,
+  "age": {
+    "$numberDecimal": "22"
+  },
+  "position": "WR",
+  "team": "packers"
+},
+{
+  "_id": {
+    "$oid": "68c6376a5154efcdeca2a496"
+  },
+  "name": {
+    "first": "Romeo",
+    "last": "Doubs"
+  },
+  "active": true,
+  "age": {
+    "$numberDecimal": "25"
+  },
+  "position": "WR",
+  "team": "packers"
+},
+{
+  "_id": {
+    "$oid": "68c637a15154efcdeca2a497"
+  },
+  "name": {
+    "first": "Tucker",
+    "last": "Kraft"
+  },
+  "active": true,
+  "age": {
+    "$numberDecimal": "24"
+  },
+  "position": "TE",
+  "team": "packers"
+},
+{
+  "_id": {
+    "$oid": "68c637f65154efcdeca2a498"
+  },
+  "name": {
+    "first": "Rasheed",
+    "last": "Walker"
+  },
+  "active": true,
+  "age": {
+    "$numberDecimal": "25"
+  },
+  "position": "LT",
+  "team": "packers"
+},
+{
+  "_id": {
+    "$oid": "68c6388f5154efcdeca2a499"
+  },
+  "name": {
+    "first": "Aaron",
+    "last": "Banks"
+  },
+  "active": false,
+  "age": {
+    "$numberDecimal": "28"
+  },
+  "position": "LG",
+  "team": "packers"
+},
+{
+  "_id": {
+    "$oid": "68c638db5154efcdeca2a49a"
+  },
+  "name": {
+    "first": "Elgton",
+    "last": "Jenkins"
+  },
+  "active": true,
+  "age": {
+    "$numberDecimal": "29"
+  },
+  "position": "C",
+  "team": "packers"
+},
+{
+  "_id": {
+    "$oid": "68c639105154efcdeca2a49b"
+  },
+  "name": {
+    "first": "Sean",
+    "last": "Rhyan"
+  },
+  "active": true,
+  "age": {
+    "$numberDecimal": "24"
+  },
+  "position": "RG",
+  "team": "packers"
+},
+{
+  "_id": {
+    "$oid": "68c6395f5154efcdeca2a49c"
+  },
+  "name": {
+    "first": "Zach",
+    "last": "Tom"
+  },
+  "active": false,
+  "age": {
+    "$numberDecimal": "26"
+  },
+  "position": "RT",
+  "team": "packers"
+}]
+
+////////**********QUERIES*********////////////
+
+//Query: Find the Player with the last name of Love.
+
+new Document("name.last", "Love")
+
+//Query to find inactive players.
+new Document("active", false)
+//Query Active Players.
+new Document("active", true)
+//Query Players older than 25.
+new Document("age", new Document("$gt", Decimal128.parse("25")))
+// Query the Wide Receivers.
+new Document("position", "WR")
